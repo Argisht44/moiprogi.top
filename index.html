@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Argisht | Android-приложения</title>
   <style>
     body {
@@ -16,13 +16,30 @@
     header {
       background-color: #2d2d94;
       color: #fff;
-      padding: 1.5rem 1rem;
+      padding: 1.5rem 1rem 1rem;
       text-align: center;
+      position: relative;
     }
 
     header h1 {
       margin: 0;
       font-size: 2rem;
+    }
+
+    .language-selector {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .language-selector img {
+      width: 24px;
+      height: 16px;
+      cursor: pointer;
+      border: 1px solid #fff;
+      border-radius: 3px;
     }
 
     .container {
@@ -91,44 +108,112 @@
 <body>
 
 <header>
-  <h1>Добро пожаловать на moiprogi.top</h1>
-  <p>Мои Android-приложения</p>
+  <div class="language-selector">
+    <img src="https://flagcdn.com/w20/ru.png" alt="Русский" onclick="setLanguage('ru')" />
+    <img src="https://flagcdn.com/w20/ua.png" alt="Українська" onclick="setLanguage('uk')" />
+    <img src="https://flagcdn.com/w20/us.png" alt="English" onclick="setLanguage('en')" />
+    <img src="https://flagcdn.com/w20/de.png" alt="Deutsch" onclick="setLanguage('de')" />
+  </div>
+  <h1 id="main-title"></h1>
+  <p id="subtitle"></p>
 </header>
 
 <div class="container">
-
   <div class="app">
-    <img src="assets/myip.webp" alt="My IP">
+    <img src="assets/myip.webp" alt="My IP" />
     <div class="app-content">
       <h2>My IP</h2>
-      <p>Простое приложение для просмотра вашего внешнего IP-адреса и информации о сети.</p>
-      <a href="https://play.google.com/store/apps/details?id=com.argisht.myip" target="_blank">Смотреть в Google Play</a>
+      <p id="desc-myip"></p>
+      <a href="https://play.google.com/store/apps/details?id=com.argisht.myip" target="_blank" id="link-myip"></a>
     </div>
   </div>
 
   <div class="app">
-    <img src="assets/freefilms.webp" alt="Free Films">
+    <img src="assets/freefilms.webp" alt="Free Films" />
     <div class="app-content">
       <h2>Free Films</h2>
-      <p>Каталог фильмов с возможностью быстрого поиска, рейтингов и подробной информации.</p>
-      <a href="https://play.google.com/store/apps/details?id=com.argisht.freefilms" target="_blank">Смотреть в Google Play</a>
+      <p id="desc-films"></p>
+      <a href="https://play.google.com/store/apps/details?id=com.argisht.freefilms" target="_blank" id="link-films"></a>
     </div>
   </div>
 
   <div class="app">
-    <img src="assets/sven.png" alt="Sven PS-750 Remote">
+    <img src="assets/sven.png" alt="Sven PS-750 Remote" />
     <div class="app-content">
       <h2>Sven PS-750 Remote</h2>
-      <p>Управляйте своей колонкой Sven PS-750 с помощью ИК-пульта прямо с телефона!</p>
-      <a href="https://play.google.com/store/apps/details?id=com.argisht.svenps750" target="_blank">Смотреть в Google Play</a>
+      <p id="desc-sven"></p>
+      <a href="https://play.google.com/store/apps/details?id=com.argisht.svenps750" target="_blank" id="link-sven"></a>
     </div>
   </div>
-
 </div>
 
 <footer>
   © 2025 Argisht Mamreyan | moiprogi.top
 </footer>
+
+<script>
+  const translations = {
+    ru: {
+      title: "Добро пожаловать на moiprogi.top",
+      subtitle: "Мои Android-приложения",
+      descMyIP: "Простое приложение для просмотра вашего внешнего IP-адреса и информации о сети.",
+      descFilms: "Каталог фильмов с возможностью быстрого поиска, рейтингов и подробной информации.",
+      descSven: "Управляйте своей колонкой Sven PS-750 с помощью ИК-пульта прямо с телефона!",
+      linkText: "Смотреть в Google Play"
+    },
+    uk: {
+      title: "Ласкаво просимо на moiprogi.top",
+      subtitle: "Мої Android-додатки",
+      descMyIP: "Простий додаток для перегляду вашої зовнішньої IP-адреси та інформації про мережу.",
+      descFilms: "Каталог фільмів з можливістю швидкого пошуку, рейтингів та детальної інформації.",
+      descSven: "Керуйте своєю колонкою Sven PS-750 за допомогою ІЧ-пульта прямо з телефону!",
+      linkText: "Переглянути в Google Play"
+    },
+    en: {
+      title: "Welcome to moiprogi.top",
+      subtitle: "My Android apps",
+      descMyIP: "A simple app to view your external IP address and network info.",
+      descFilms: "A movie catalog with fast search, ratings, and detailed info.",
+      descSven: "Control your Sven PS-750 speaker using your phone’s IR remote!",
+      linkText: "View on Google Play"
+    },
+    de: {
+      title: "Willkommen auf moiprogi.top",
+      subtitle: "Meine Android-Apps",
+      descMyIP: "Eine einfache App zur Anzeige Ihrer externen IP-Adresse und Netzwerkdetails.",
+      descFilms: "Ein Filmkatalog mit schneller Suche, Bewertungen und Details.",
+      descSven: "Steuern Sie Ihren Sven PS-750 Lautsprecher mit der IR-Fernbedienung Ihres Handys!",
+      linkText: "Bei Google Play ansehen"
+    }
+  };
+
+  function setLanguage(lang) {
+    const t = translations[lang] || translations["en"];
+    document.getElementById("main-title").textContent = t.title;
+    document.getElementById("subtitle").textContent = t.subtitle;
+    document.getElementById("desc-myip").textContent = t.descMyIP;
+    document.getElementById("desc-films").textContent = t.descFilms;
+    document.getElementById("desc-sven").textContent = t.descSven;
+    document.getElementById("link-myip").textContent = t.linkText;
+    document.getElementById("link-films").textContent = t.linkText;
+    document.getElementById("link-sven").textContent = t.linkText;
+
+    localStorage.setItem("selectedLang", lang);
+  }
+
+  function detectLanguage() {
+    const savedLang = localStorage.getItem("selectedLang");
+    if (savedLang) {
+      setLanguage(savedLang);
+    } else {
+      const browserLang = navigator.language.slice(0, 2);
+      const supported = ["ru", "uk", "en", "de"];
+      setLanguage(supported.includes(browserLang) ? browserLang : "en");
+    }
+  }
+
+  detectLanguage();
+</script>
 
 </body>
 </html>
