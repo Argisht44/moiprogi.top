@@ -1,37 +1,134 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Добро пожаловать на moiprogi.top</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            background-color: #f5f5f5;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            align-items: center;
-            justify-content: center;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            color: #666;
-        }
-        footer {
-            margin-top: auto;
-            padding: 1rem;
-            color: #999;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Argisht | Android-приложения</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f0f0f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #2d2d94;
+      color: #fff;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 1rem;
+    }
+
+    .app {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .app img {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      margin-right: 1rem;
+    }
+
+    .app-content {
+      flex: 1;
+    }
+
+    .app h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    .app p {
+      margin: 0 0 0.5rem;
+    }
+
+    .app a {
+      display: inline-block;
+      color: #2d2d94;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    @media (max-width: 600px) {
+      .app {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .app img {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>👋 Привет!</h1>
-    <p>Это мой сайт на GitHub Pages — <strong>moiprogi.top</strong></p>
-    <footer>© 2025 Argisht Mamreyan</footer>
+
+<header>
+  <h1>Добро пожаловать на moiprogi.top</h1>
+  <p>Мои Android-приложения</p>
+</header>
+
+<div class="container">
+
+  <div class="app">
+    <img src="https://play-lh.googleusercontent.com/kMiFPZzUz3uUz3_0b5hv4C-x8U_Mrc0W-iKZ_lFL1SK-gHPhHnhVrYjRex4hxG8F7Q=w240-h480" alt="My IP">
+    <div class="app-content">
+      <h2>My IP</h2>
+      <p>Простое приложение для просмотра вашего внешнего IP-адреса и информации о сети.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.argisht.myip" target="_blank">Смотреть в Google Play</a>
+    </div>
+  </div>
+
+  <div class="app">
+    <img src="https://play-lh.googleusercontent.com/FbdT_Xv9qC7ORtV2TbZ0bBHRLffPz0em-q0xbyzlo92cAsowUl-KCK0X3iyFVOqdXA=w240-h480" alt="Free Films">
+    <div class="app-content">
+      <h2>Free Films</h2>
+      <p>Каталог фильмов с возможностью быстрого поиска, рейтингов и подробной информации.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.argisht.freefilms" target="_blank">Смотреть в Google Play</a>
+    </div>
+  </div>
+
+  <div class="app">
+    <img src="https://play-lh.googleusercontent.com/7u5AoIR2qtNhkCt9T2HwJqH-Zne3ZWZPZXFtvKrUae9IP50S3OyytXgy-MUpT9ebWg=w240-h480" alt="Sven PS-750 Remote">
+    <div class="app-content">
+      <h2>Sven PS-750 Remote</h2>
+      <p>Управляйте своей колонкой Sven PS-750 с помощью ИК-пульта прямо с телефона!</p>
+      <a href="https://play.google.com/store/apps/details?id=com.argisht.svenps750" target="_blank">Смотреть в Google Play</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Argisht Mamreyan | moiprogi.top
+</footer>
+
 </body>
 </html>
