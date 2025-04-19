@@ -202,13 +202,14 @@
   }
 
   function detectLanguage() {
-    const savedLang = localStorage.getItem("selectedLang");
-    if (savedLang) {
-      setLanguage(savedLang);
+    const browserLang = navigator.language.slice(0, 2);  // Получаем первые два символа из языка браузера (например, "en", "ru")
+    const supportedLanguages = ['ru', 'uk', 'en', 'de'];
+
+    // Если язык в браузере поддерживается, то устанавливаем его, иначе ставим английский по умолчанию
+    if (supportedLanguages.includes(browserLang)) {
+      setLanguage(browserLang);
     } else {
-      const browserLang = navigator.language.slice(0, 2);
-      const supported = ["ru", "uk", "en", "de"];
-      setLanguage(supported.includes(browserLang) ? browserLang : "en");
+      setLanguage("en");  // Если язык не поддерживается, ставим английский по умолчанию
     }
   }
 
