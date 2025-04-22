@@ -1,5 +1,69 @@
 const translations = {
   ru: {
+    // index.html
+    "index-meta-description": "Moiprogi.top — сайт разработчика Argisht Mamreyan. Здесь вы найдете Android-приложения и расширения для Chrome: My IP, Free Films, Sven PS-750 Remote и другие полезные проекты.",
+    "index-meta-keywords": "Android-приложения, Chrome-расширения, My IP, Free Films, Sven PS-750, разработчик, Argisht Mamreyan, moiprogi.top",
+    "index-og-title": "Moiprogi.top | Главная",
+    "index-og-description": "Android-приложения и Chrome-расширения от Argisht Mamreyan. Скачивайте My IP, Free Films и другие проекты.",
+    "index-title": "moiprogi.top | Главная",
+    // apps.html
+    "apps-meta-description": "Android-приложения от Argisht Mamreyan: My IP, Free Films, Sven PS-750 Remote. Скачивайте на Google Play!",
+    "apps-meta-keywords": "Android-приложения, My IP, Free Films, Sven PS-750, Google Play, Argisht Mamreyan, moiprogi.top",
+    "apps-og-title": "Moiprogi.top | Приложения",
+    "apps-og-description": "Android-приложения от Argisht Mamreyan: My IP, Free Films, Sven PS-750 Remote. Скачивайте на Google Play!",
+    "apps-title": "moiprogi.top | Приложения",
+    "apps-myip-alt": "Иконка приложения My IP",
+    "apps-freefilms-alt": "Иконка приложения Free Films",
+    "apps-sven-alt": "Иконка приложения Sven PS-750 Remote",
+    // freefilms_details.html
+    "freefilms-meta-description": "Free Films — каталог фильмов с быстрым поиском и полной информацией. Скачивайте на Google Play!",
+    "freefilms-meta-keywords": "Free Films, Android-приложение, каталог фильмов, Google Play, Argisht Mamreyan, moiprogi.top",
+    "freefilms-og-title": "Moiprogi.top | Free Films",
+    "freefilms-og-description": "Free Films — каталог фильмов с быстрым поиском. Скачивайте на Google Play!",
+    "freefilms-title": "moiprogi.top | Free Films",
+    "freefilms-alt": "Иконка приложения Free Films",
+    // svenps750_details.html
+    "svenps750-meta-description": "Sven PS-750 Remote — приложение для управления колонкой Sven PS-750 через Bluetooth. Скачивайте на Google Play!",
+    "svenps750-meta-keywords": "Sven PS-750, Android-приложение, Bluetooth, Google Play, Argisht Mamreyan, moiprogi.top",
+    "svenps750-og-title": "Moiprogi.top | Sven PS-750 Remote",
+    "svenps750-og-description": "Sven PS-750 Remote — приложение для управления колонкой через Bluetooth. Скачивайте на Google Play!",
+    "svenps750-title": "moiprogi.top | Sven PS-750 Remote",
+    "svenps750-alt": "Иконка приложения Sven PS-750 Remote",
+    // myip_details.html
+    "myip-meta-description": "My IP — приложение для просмотра вашего внешнего IP-адреса и информации о сети. Скачивайте на Google Play!",
+    "myip-meta-keywords": "My IP, Android-приложение, IP-адрес, сеть, Google Play, Argisht Mamreyan, moiprogi.top",
+    "myip-og-title": "Moiprogi.top | My IP",
+    "myip-og-description": "My IP — приложение для просмотра IP-адреса и информации о сети. Скачивайте на Google Play!",
+    "myip-title": "moiprogi.top | My IP",
+    "myip-alt": "Иконка приложения My IP",
+    // extension.html
+    "extension-meta-description": "Chrome-расширение от Argisht Mamreyan. Узнайте больше и установите расширение на moiprogi.top!",
+    "extension-meta-keywords": "Chrome-расширение, Argisht Mamreyan, moiprogi.top, установить расширение",
+    "extension-og-title": "Moiprogi.top | Расширение Chrome",
+    "extension-og-description": "Chrome-расширение от Argisht Mamreyan. Узнайте больше и установите!",
+    "extension-title": "moiprogi.top | Расширение Chrome",
+    "extension-alt": "Иконка Chrome-расширения",
+    // extension_details.html
+    "extension_details-meta-description": "Work.ua Salary Filter — расширение для Chrome, фильтрующее вакансии на work.ua по зарплате. Установите на moiprogi.top!",
+    "extension_details-meta-keywords": "Chrome-расширение, Work.ua, фильтр зарплаты, Argisht Mamreyan, moiprogi.top, установить расширение",
+    "extension_details-og-title": "Moiprogi.top | Work.ua Salary Filter",
+    "extension_details-og-description": "Work.ua Salary Filter — расширение для фильтрации вакансий по зарплате. Установите из Chrome Web Store!",
+    "extension_details-title": "moiprogi.top | Work.ua Salary Filter",
+    "extension_details-alt": "Иконка Chrome-расширения Work.ua Salary Filter",
+    "extension_details-description": "Это удобное расширение для браузера Chrome, которое позволяет оптимизировать поиск работы на сайте work.ua, фильтруя вакансии в зависимости от ваших зарплатных предпочтений.\n\n**Основные функции:**\n- **Автоматическая фильтрация вакансий:** расширение скрывает предложения, не соответствующие установленному уровню зарплаты.",
+    // Common
+    "footer-copyright": "© 2025 Argisht Mamreyan | moiprogi.top",
+    "language-selector-alt": "Язык",
+    "language-selector-title": "Выбор языка",
+    "flag-ru-alt": "Русский",
+    "flag-ru-title": "Русский",
+    "flag-uk-alt": "Українська",
+    "flag-uk-title": "Українська",
+    "flag-en-alt": "English",
+    "flag-en-title": "English",
+    "flag-de-alt": "Deutsch",
+    "flag-de-title": "Deutsch",
+    // Existing translations
     "nav-home": "Главная",
     "nav-apps": "Приложения",
     "nav-ext": "Расширение",
@@ -21,11 +85,75 @@ const translations = {
     "app-title-sven": "Sven PS-750 Remote",
     "app-description-sven": "Sven PS-750 Remote — это приложение для управления устройством Sven PS-750. Оно позволяет легко настраивать и управлять устройством прямо с вашего телефона. Удобный интерфейс и быстрая настройка делают его незаменимым инструментом.",
     "app-link-sven": "Скачать в Google Play",
-    "extension-title": "Расширение Chrome",
-    "extension-description": "Наше расширение для Chrome предоставляет удобный доступ к функциям прямо из вашего браузера. Оно идеально подходит для быстрого управления задачами и повышения вашей продуктивности.",
+    "extension-title-details": "Work.ua Salary Filter",
+    "extension-description": "Удобное расширение для Chrome, которое фильтрует вакансии на сайте work.ua по вашим зарплатным предпочтениям.",
     "extension-link": "Установить расширение",
   },
   uk: {
+    // index.html
+    "index-meta-description": "Moiprogi.top — сайт розробника Аргішта Мамреяна. Тут ви знайдете Android-додатки та розширення для Chrome: My IP, Free Films, Sven PS-750 Remote та інші корисні проекти.",
+    "index-meta-keywords": "Android-додатки, Chrome-розширення, My IP, Free Films, Sven PS-750, розробник, Аргішт Мамреян, moiprogi.top",
+    "index-og-title": "Moiprogi.top | Головна",
+    "index-og-description": "Android-додатки та Chrome-розширення від Аргішта Мамреяна. Завантажуйте My IP, Free Films та інші проекти.",
+    "index-title": "moiprogi.top | Головна",
+    // apps.html
+    "apps-meta-description": "Android-додатки від Аргішта Мамреяна: My IP, Free Films, Sven PS-750 Remote. Завантажуйте в Google Play!",
+    "apps-meta-keywords": "Android-додатки, My IP, Free Films, Sven PS-750, Google Play, Аргішт Мамреян, moiprogi.top",
+    "apps-og-title": "Moiprogi.top | Додатки",
+    "apps-og-description": "Android-додатки від Аргішта Мамреяна: My IP, Free Films, Sven PS-750 Remote. Завантажуйте в Google Play!",
+    "apps-title": "moiprogi.top | Додатки",
+    "apps-myip-alt": "Іконка додатка My IP",
+    "apps-freefilms-alt": "Іконка додатка Free Films",
+    "apps-sven-alt": "Іконка додатка Sven PS-750 Remote",
+    // freefilms_details.html
+    "freefilms-meta-description": "Free Films — каталог фільмів з швидким пошуком і повною інформацією. Завантажуйте в Google Play!",
+    "freefilms-meta-keywords": "Free Films, Android-додаток, каталог фільмів, Google Play, Аргішт Мамреян, moiprogi.top",
+    "freefilms-og-title": "Moiprogi.top | Free Films",
+    "freefilms-og-description": "Free Films — каталог фільмів з швидким пошуком. Завантажуйте в Google Play!",
+    "freefilms-title": "moiprogi.top | Free Films",
+    "freefilms-alt": "Іконка додатка Free Films",
+    // svenps750_details.html
+    "svenps750-meta-description": "Sven PS-750 Remote — додаток для керування колонкою Sven PS-750 через Bluetooth. Завантажуйте в Google Play!",
+    "svenps750-meta-keywords": "Sven PS-750, Android-додаток, Bluetooth, Google Play, Аргішт Мамреян, moiprogi.top",
+    "svenps750-og-title": "Moiprogi.top | Sven PS-750 Remote",
+    "svenps750-og-description": "Sven PS-750 Remote — додаток для керування колонкою через Bluetooth. Завантажуйте в Google Play!",
+    "svenps750-title": "moiprogi.top | Sven PS-750 Remote",
+    "svenps750-alt": "Іконка додатка Sven PS-750 Remote",
+    // myip_details.html
+    "myip-meta-description": "My IP — додаток для перегляду вашої зовнішньої IP-адреси та інформації про мережу. Завантажуйте в Google Play!",
+    "myip-meta-keywords": "My IP, Android-додаток, IP-адреса, мережа, Google Play, Аргішт Мамреян, moiprogi.top",
+    "myip-og-title": "Moiprogi.top | My IP",
+    "myip-og-description": "My IP — додаток для перегляду IP-адреси та інформації про мережу. Завантажуйте в Google Play!",
+    "myip-title": "moiprogi.top | My IP",
+    "myip-alt": "Іконка додатка My IP",
+    // extension.html
+    "extension-meta-description": "Chrome-розширення від Аргішта Мамреяна. Дізнайтесь більше та встановіть розширення на moiprogi.top!",
+    "extension-meta-keywords": "Chrome-розширення, Аргішт Мамреян, moiprogi.top, встановити розширення",
+    "extension-og-title": "Moiprogi.top | Розширення Chrome",
+    "extension-og-description": "Chrome-розширення від Аргішта Мамреяна. Дізнайтесь більше та встановіть!",
+    "extension-title": "moiprogi.top | Розширення Chrome",
+    "extension-alt": "Іконка Chrome-розширення",
+    // extension_details.html
+    "extension_details-meta-description": "Work.ua Salary Filter — розширення для Chrome, що фільтрує вакансії на work.ua за зарплатою. Встановіть на moiprogi.top!",
+    "extension_details-meta-keywords": "Chrome-розширення, Work.ua, фільтр зарплати, Аргішт Мамреян, moiprogi.top, встановити розширення",
+    "extension_details-og-title": "Moiprogi.top | Work.ua Salary Filter",
+    "extension_details-og-description": "Work.ua Salary Filter — розширення для фільтрації вакансій за зарплатою. Встановіть із Chrome Web Store!",
+    "extension_details-title": "moiprogi.top | Work.ua Salary Filter",
+    "extension_details-alt": "Іконка Chrome-розширення Work.ua Salary Filter",
+    "extension_details-description": "Це зручне розширення для браузера Chrome, яке дозволяє оптимізувати пошук роботи на сайті work.ua, фільтруючи вакансії залежно від ваших зарплатних уподобань.\n\n**Основні функції:**\n- **Автоматична фільтрація вакансій:** розширення приховує пропозиції, що не відповідають встановленому рівню зарплати.",
+    // Common
+    "footer-copyright": "© 2025 Аргішт Мамреян | moiprogi.top",
+    "language-selector-alt": "Мова",
+    "language-selector-title": "Вибір мови",
+    "flag-ru-alt": "Русский",
+    "flag-ru-title": "Русский",
+    "flag-uk-alt": "Українська",
+    "flag-uk-title": "Українська",
+    "flag-en-alt": "English",
+    "flag-en-title": "English",
+    "flag-de-alt": "Deutsch",
+    "flag-de-title": "Deutsch",
+    // Existing translations
     "nav-home": "Головна",
     "nav-apps": "Додатки",
     "nav-ext": "Розширення",
@@ -47,11 +175,75 @@ const translations = {
     "app-title-sven": "Sven PS-750 Remote",
     "app-description-sven": "Sven PS-750 Remote — це додаток для керування пристроєм Sven PS-750. Він дозволяє легко налаштовувати та керувати пристроєм прямо з вашого телефону. Зручний інтерфейс і швидке налаштування роблять його незамінним інструментом.",
     "app-link-sven": "Завантажити в Google Play",
-    "extension-title": "Розширення Chrome",
-    "extension-description": "Наше розширення для Chrome надає зручний доступ до функцій прямо з вашого браузера. Воно ідеально підходить для швидкого керування завданнями та підвищення вашої продуктивності.",
+    "extension-title-details": "Work.ua Salary Filter",
+    "extension-description": "Зручне розширення для Chrome, яке фільтрує вакансії на сайті work.ua за вашими зарплатними уподобаннями.",
     "extension-link": "Встановити розширення",
   },
   en: {
+    // index.html
+    "index-meta-description": "Moiprogi.top — the website of developer Argisht Mamreyan. Here you will find Android apps and Chrome extensions: My IP, Free Films, Sven PS-750 Remote, and other useful projects.",
+    "index-meta-keywords": "Android apps, Chrome extensions, My IP, Free Films, Sven PS-750, developer, Argisht Mamreyan, moiprogi.top",
+    "index-og-title": "Moiprogi.top | Home",
+    "index-og-description": "Android apps and Chrome extensions by Argisht Mamreyan. Download My IP, Free Films, and other projects.",
+    "index-title": "moiprogi.top | Home",
+    // apps.html
+    "apps-meta-description": "Android apps by Argisht Mamreyan: My IP, Free Films, Sven PS-750 Remote. Download on Google Play!",
+    "apps-meta-keywords": "Android apps, My IP, Free Films, Sven PS-750, Google Play, Argisht Mamreyan, moiprogi.top",
+    "apps-og-title": "Moiprogi.top | Apps",
+    "apps-og-description": "Android apps by Argisht Mamreyan: My IP, Free Films, Sven PS-750 Remote. Download on Google Play!",
+    "apps-title": "moiprogi.top | Apps",
+    "apps-myip-alt": "My IP app icon",
+    "apps-freefilms-alt": "Free Films app icon",
+    "apps-sven-alt": "Sven PS-750 Remote app icon",
+    // freefilms_details.html
+    "freefilms-meta-description": "Free Films — a movie catalog with fast search and full information. Download on Google Play!",
+    "freefilms-meta-keywords": "Free Films, Android app, movie catalog, Google Play, Argisht Mamreyan, moiprogi.top",
+    "freefilms-og-title": "Moiprogi.top | Free Films",
+    "freefilms-og-description": "Free Films — a movie catalog with fast search. Download on Google Play!",
+    "freefilms-title": "moiprogi.top | Free Films",
+    "freefilms-alt": "Free Films app icon",
+    // svenps750_details.html
+    "svenps750-meta-description": "Sven PS-750 Remote — an app for controlling the Sven PS-750 speaker via Bluetooth. Download on Google Play!",
+    "svenps750-meta-keywords": "Sven PS-750, Android app, Bluetooth, Google Play, Argisht Mamreyan, moiprogi.top",
+    "svenps750-og-title": "Moiprogi.top | Sven PS-750 Remote",
+    "svenps750-og-description": "Sven PS-750 Remote — an app for controlling the speaker via Bluetooth. Download on Google Play!",
+    "svenps750-title": "moiprogi.top | Sven PS-750 Remote",
+    "svenps750-alt": "Sven PS-750 Remote app icon",
+    // myip_details.html
+    "myip-meta-description": "My IP — an app for viewing your external IP address and network information. Download on Google Play!",
+    "myip-meta-keywords": "My IP, Android app, IP address, network, Google Play, Argisht Mamreyan, moiprogi.top",
+    "myip-og-title": "Moiprogi.top | My IP",
+    "myip-og-description": "My IP — an app for viewing IP address and network information. Download on Google Play!",
+    "myip-title": "moiprogi.top | My IP",
+    "myip-alt": "My IP app icon",
+    // extension.html
+    "extension-meta-description": "Chrome extension by Argisht Mamreyan. Learn more and install the extension on moiprogi.top!",
+    "extension-meta-keywords": "Chrome extension, Argisht Mamreyan, moiprogi.top, install extension",
+    "extension-og-title": "Moiprogi.top | Chrome Extension",
+    "extension-og-description": "Chrome extension by Argisht Mamreyan. Learn more and install!",
+    "extension-title": "moiprogi.top | Chrome Extension",
+    "extension-alt": "Chrome extension icon",
+    // extension_details.html
+    "extension_details-meta-description": "Work.ua Salary Filter — a Chrome extension that filters job listings on work.ua based on salary. Install from moiprogi.top!",
+    "extension_details-meta-keywords": "Chrome extension, Work.ua, salary filter, Argisht Mamreyan, moiprogi.top, install extension",
+    "extension_details-og-title": "Moiprogi.top | Work.ua Salary Filter",
+    "extension_details-og-description": "Work.ua Salary Filter — an extension for filtering job listings by salary. Install from Chrome Web Store!",
+    "extension_details-title": "moiprogi.top | Work.ua Salary Filter",
+    "extension_details-alt": "Work.ua Salary Filter Chrome extension icon",
+    "extension_details-description": "This convenient Chrome extension optimizes job searches on work.ua by filtering vacancies based on your salary preferences.\n\n**Key Features:**\n- **Automatic vacancy filtering:** The extension hides job listings that do not meet your set salary level.",
+    // Common
+    "footer-copyright": "© 2025 Argisht Mamreyan | moiprogi.top",
+    "language-selector-alt": "Language",
+    "language-selector-title": "Select language",
+    "flag-ru-alt": "Русский",
+    "flag-ru-title": "Русский",
+    "flag-uk-alt": "Українська",
+    "flag-uk-title": "Українська",
+    "flag-en-alt": "English",
+    "flag-en-title": "English",
+    "flag-de-alt": "Deutsch",
+    "flag-de-title": "Deutsch",
+    // Existing translations
     "nav-home": "Home",
     "nav-apps": "Apps",
     "nav-ext": "Extension",
@@ -73,11 +265,75 @@ const translations = {
     "app-title-sven": "Sven PS-750 Remote",
     "app-description-sven": "Sven PS-750 Remote is an app for managing the Sven PS-750 device. It allows you to easily set up and control the device directly from your phone. A user-friendly interface and quick setup make it an essential tool.",
     "app-link-sven": "Download on Google Play",
-    "extension-title": "Chrome Extension",
-    "extension-description": "Our Chrome extension provides convenient access to features right from your browser. It’s perfect for quick task management and boosting your productivity.",
+    "extension-title-details": "Work.ua Salary Filter",
+    "extension-description": "A convenient Chrome extension that filters job listings on work.ua based on your salary preferences.",
     "extension-link": "Install Extension",
   },
   de: {
+    // index.html
+    "index-meta-description": "Moiprogi.top — die Website des Entwicklers Argisht Mamreyan. Hier finden Sie Android-Apps und Chrome-Erweiterungen: My IP, Free Films, Sven PS-750 Remote und andere nützliche Projekte.",
+    "index-meta-keywords": "Android-Apps, Chrome-Erweiterungen, My IP, Free Films, Sven PS-750, Entwickler, Argisht Mamreyan, moiprogi.top",
+    "index-og-title": "Moiprogi.top | Startseite",
+    "index-og-description": "Android-Apps und Chrome-Erweiterungen von Argisht Mamreyan. Laden Sie My IP, Free Films und andere Projekte herunter.",
+    "index-title": "moiprogi.top | Startseite",
+    // apps.html
+    "apps-meta-description": "Android-Apps von Argisht Mamreyan: My IP, Free Films, Sven PS-750 Remote. Im Google Play herunterladen!",
+    "apps-meta-keywords": "Android-Apps, My IP, Free Films, Sven PS-750, Google Play, Argisht Mamreyan, moiprogi.top",
+    "apps-og-title": "Moiprogi.top | Apps",
+    "apps-og-description": "Android-Apps von Argisht Mamreyan: My IP, Free Films, Sven PS-750 Remote. Im Google Play herunterladen!",
+    "apps-title": "moiprogi.top | Apps",
+    "apps-myip-alt": "My IP App-Symbol",
+    "apps-freefilms-alt": "Free Films App-Symbol",
+    "apps-sven-alt": "Sven PS-750 Remote App-Symbol",
+    // freefilms_details.html
+    "freefilms-meta-description": "Free Films — ein Filmkatalog mit schneller Suche und vollständigen Informationen. Im Google Play herunterladen!",
+    "freefilms-meta-keywords": "Free Films, Android-App, Filmkatalog, Google Play, Argisht Mamreyan, moiprogi.top",
+    "freefilms-og-title": "Moiprogi.top | Free Films",
+    "freefilms-og-description": "Free Films — ein Filmkatalog mit schneller Suche. Im Google Play herunterladen!",
+    "freefilms-title": "moiprogi.top | Free Films",
+    "freefilms-alt": "Free Films App-Symbol",
+    // svenps750_details.html
+    "svenps750-meta-description": "Sven PS-750 Remote — eine App zur Steuerung des Sven PS-750 Lautsprechers über Bluetooth. Im Google Play herunterladen!",
+    "svenps750-meta-keywords": "Sven PS-750, Android-App, Bluetooth, Google Play, Argisht Mamreyan, moiprogi.top",
+    "svenps750-og-title": "Moiprogi.top | Sven PS-750 Remote",
+    "svenps750-og-description": "Sven PS-750 Remote — eine App zur Steuerung des Lautsprechers über Bluetooth. Im Google Play herunterladen!",
+    "svenps750-title": "moiprogi.top | Sven PS-750 Remote",
+    "svenps750-alt": "Sven PS-750 Remote App-Symbol",
+    // myip_details.html
+    "myip-meta-description": "My IP — eine App zur Anzeige Ihrer externen IP-Adresse und Netzwerkinformationen. Im Google Play herunterladen!",
+    "myip-meta-keywords": "My IP, Android-App, IP-Adresse, Netzwerk, Google Play, Argisht Mamreyan, moiprogi.top",
+    "myip-og-title": "Moiprogi.top | My IP",
+    "myip-og-description": "My IP — eine App zur Anzeige von IP-Adresse und Netzwerkinformationen. Im Google Play herunterladen!",
+    "myip-title": "moiprogi.top | My IP",
+    "myip-alt": "My IP App-Symbol",
+    // extension.html
+    "extension-meta-description": "Chrome-Erweiterung von Argisht Mamreyan. Erfahren Sie mehr und installieren Sie die Erweiterung auf moiprogi.top!",
+    "extension-meta-keywords": "Chrome-Erweiterung, Argisht Mamreyan, moiprogi.top, Erweiterung installieren",
+    "extension-og-title": "Moiprogi.top | Chrome-Erweiterung",
+    "extension-og-description": "Chrome-Erweiterung von Argisht Mamreyan. Erfahren Sie mehr und installieren Sie!",
+    "extension-title": "moiprogi.top | Chrome-Erweiterung",
+    "extension-alt": "Chrome-Erweiterungssymbol",
+    // extension_details.html
+    "extension_details-meta-description": "Work.ua Salary Filter — eine Chrome-Erweiterung, die Stellenanzeigen auf work.ua nach Gehalt filtert. Installieren Sie von moiprogi.top!",
+    "extension_details-meta-keywords": "Chrome-Erweiterung, Work.ua, Gehaltsfilter, Argisht Mamreyan, moiprogi.top, Erweiterung installieren",
+    "extension_details-og-title": "Moiprogi.top | Work.ua Salary Filter",
+    "extension_details-og-description": "Work.ua Salary Filter — eine Erweiterung zum Filtern von Stellenanzeigen nach Gehalt. Installieren Sie aus dem Chrome Web Store!",
+    "extension_details-title": "moiprogi.top | Work.ua Salary Filter",
+    "extension_details-alt": "Work.ua Salary Filter Chrome-Erweiterungssymbol",
+    "extension_details-description": "Diese praktische Chrome-Erweiterung optimiert die Jobsuche auf work.ua, indem sie Stellenanzeigen basierend auf Ihren Gehaltsvorstellungen filtert.\n\n**Hauptfunktionen:**\n- **Automatische Filterung von Stellenanzeigen:** Die Erweiterung blendet Angebote aus, die nicht Ihrem festgelegten Gehaltsniveau entsprechen.",
+    // Common
+    "footer-copyright": "© 2025 Argisht Mamreyan | moiprogi.top",
+    "language-selector-alt": "Sprache",
+    "language-selector-title": "Sprache auswählen",
+    "flag-ru-alt": "Русский",
+    "flag-ru-title": "Русский",
+    "flag-uk-alt": "Українська",
+    "flag-uk-title": "Українська",
+    "flag-en-alt": "English",
+    "flag-en-title": "English",
+    "flag-de-alt": "Deutsch",
+    "flag-de-title": "Deutsch",
+    // Existing translations
     "nav-home": "Startseite",
     "nav-apps": "Apps",
     "nav-ext": "Erweiterung",
@@ -99,8 +355,8 @@ const translations = {
     "app-title-sven": "Sven PS-750 Remote",
     "app-description-sven": "Sven PS-750 Remote ist eine App zur Steuerung des Sven PS-750 Geräts. Sie ermöglicht es Ihnen, das Gerät einfach direkt von Ihrem Telefon aus einzurichten und zu steuern. Eine benutzerfreundliche Oberfläche und schnelle Einrichtung machen sie zu einem unverzichtbaren Werkzeug.",
     "app-link-sven": "Im Google Play herunterladen",
-    "extension-title": "Chrome-Erweiterung",
-    "extension-description": "Unsere Chrome-Erweiterung bietet bequemen Zugriff auf Funktionen direkt aus Ihrem Browser. Sie ist perfekt für schnelles Aufgabenmanagement und zur Steigerung Ihrer Produktivität.",
+    "extension-title-details": "Work.ua Salary Filter",
+    "extension-description": "Eine praktische Chrome-Erweiterung, die Stellenanzeigen auf work.ua basierend auf Ihren Gehaltsvorstellungen filtert.",
     "extension-link": "Erweiterung installieren",
   },
 };
@@ -121,6 +377,30 @@ function applyTranslations() {
     const key = element.id;
     if (translations[lang][key]) {
       element.textContent = translations[lang][key];
+    }
+  });
+  document.querySelectorAll("[data-lang-key]").forEach((element) => {
+    const key = element.getAttribute("data-lang-key");
+    if (translations[lang][key]) {
+      if (element.tagName === "META") {
+        element.setAttribute("content", translations[lang][key]);
+      } else if (element.tagName === "TITLE") {
+        element.textContent = translations[lang][key];
+      } else {
+        element.textContent = translations[lang][key];
+      }
+    }
+  });
+  document.querySelectorAll("[data-lang-alt]").forEach((element) => {
+    const key = element.getAttribute("data-lang-alt");
+    if (translations[lang][key]) {
+      element.setAttribute("alt", translations[lang][key]);
+    }
+  });
+  document.querySelectorAll("[data-lang-title]").forEach((element) => {
+    const key = element.getAttribute("data-lang-title");
+    if (translations[lang][key]) {
+      element.setAttribute("title", translations[lang][key]);
     }
   });
   document.documentElement.lang = lang;

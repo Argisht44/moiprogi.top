@@ -37,69 +37,81 @@
         }
         return gk_fileData[filename] || "";
         }
-        </script><!DOCTYPE html>
+        </script><script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex));
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+</script>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="My IP — приложение для просмотра вашего внешнего IP-адреса и информации о сети. Скачивайте на Google Play!" />
-  <meta name="keywords" content="My IP, Android-приложение, IP-адрес, сеть, Google Play, Argisht Mamreyan, moiprogi.top" />
-  <meta property="og:title" content="Moiprogi.top | My IP" />
-  <meta property="og:description" content="My IP — приложение для просмотра IP-адреса и информации о сети. Скачивайте на Google Play!" />
+  <meta name="description" data-lang-key="myip-meta-description" />
+  <meta name="keywords" data-lang-key="myip-meta-keywords" />
+  <meta property="og:title" data-lang-key="myip-og-title" />
+  <meta property="og:description" data-lang-key="myip-og-description" />
   <meta property="og:image" content="https://moiprogi.top/assets/og-image.jpg" />
   <meta property="og:url" content="https://moiprogi.top/myip_details.html" />
   <meta property="og:type" content="website" />
-  <title>moiprogi.top | My IP</title>
+  <title data-lang-key="myip-title"></title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    main {
-      flex: 1;
-    }
-    footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
-  </style>
 </head>
 <body class="bg-gray-100 text-gray-900 transition-colors duration-300">
   <header class="bg-gray-800 text-white sticky top-0 z-10 shadow-lg">
     <div class="container mx-auto px-4 sm:px-6 py-4">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
-        <div class="flex flex-col w-full">
-          <div class="flex justify-between items-center">
-            <a href="index.html" class="text-xl md:text-2xl font-bold">moiprogi.top</a>
-          </div>
-          <div class="md:hidden flex justify-start mt-2">
+      <div class="flex flex-col md:flex-row md:items-center justify-between">
+        <div class="menu-container">
+          <div class="md:hidden">
             <a href="apps.html" class="text-blue-400 hover:text-blue-500 transition">← Назад к приложениям</a>
           </div>
-        </div>
-        <div class="hidden md:flex items-center space-x-4">
-          <a href="apps.html" id="nav-apps" class="hover:text-blue-400 transition"></a>
-          <a href="extension.html" id="nav-ext" class="hover:text-blue-400 transition"></a>
-          <div class="language-selector flex space-x-2">
-            <img src="https://flagcdn.com/w20/ru.png" alt="Русский флаг" onclick="setLanguage('ru')" class="w-6 h-4 border border-white rounded cursor-pointer" />
-            <img src="https://flagcdn.com/w20/ua.png" alt="Украинский флаг" onclick="setLanguage('uk')" class="w-6 h-4 border border-white rounded cursor-pointer" />
-            <img src="https://flagcdn.com/w20/us.png" alt="Флаг США" onclick="setLanguage('en')" class="w-6 h-4 border border-white rounded cursor-pointer" />
-            <img src="https://flagcdn.com/w20/de.png" alt="Немецкий флаг" onclick="setLanguage('de')" class="w-6 h-4 border border-white rounded cursor-pointer" />
+          <div class="flex items-center space-x-4">
+            <a href="index.html" class="text-xl md:text-2xl font-bold">moiprogi.top</a>
+            <div class="hidden md:flex items-center space-x-4">
+              <span class="text-white mx-2">|</span>
+              <a href="apps.html" id="nav-apps" class="hover:text-blue-400 transition"></a>
+              <span class="text-white mx-2">|</span>
+              <a href="extension.html" id="nav-ext" class="hover:text-blue-400 transition"></a>
+              <span class="text-white mx-2">|</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </header>
-
   <main class="container mx-auto px-4 sm:px-6 py-8">
     <div class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center min-w-[300px] md:min-w-[600px]">
-      <img src="assets/myip.webp" alt="Иконка приложения My IP" class="w-40 h-40 rounded-lg mb-4 md:mb-0 md:mr-6 object-cover" />
+      <img src="assets/myip.webp" data-lang-alt="myip-alt" class="w-40 h-40 rounded-lg mb-4 md:mb-0 md:mr-6 object-cover" />
       <div class="flex flex-col w-full">
         <h1 id="app-title-myip" class="text-3xl font-semibold mb-2"></h1>
         <p id="app-description-myip" class="text-base sm:text-lg mb-4"></p>
@@ -109,14 +121,50 @@
       </div>
     </div>
   </main>
-
   <footer class="bg-gray-800 text-white text-center py-4">
-    © 2025 Argisht Mamreyan | <a href="https://moiprogi.top" class="hover:text-blue-400">moiprogi.top</a>
+    <span data-lang-key="footer-copyright"></span>
   </footer>
-
+  <div class="language-selector">
+    <div class="current-flag">
+      <img id="current-flag" src="https://flagcdn.com/w20/ru.png" data-lang-alt="language-selector-alt" data-lang-title="language-selector-title">
+    </div>
+    <div id="flag-dropdown" class="flag-dropdown">
+      <img src="https://flagcdn.com/w20/ru.png" data-lang-alt="flag-ru-alt" data-lang-title="flag-ru-title" data-lang="ru" onclick="selectLanguage('ru')">
+      <img src="https://flagcdn.com/w20/ua.png" data-lang-alt="flag-uk-alt" data-lang-title="flag-uk-title" data-lang="uk" onclick="selectLanguage('uk')">
+      <img src="https://flagcdn.com/w20/us.png" data-lang-alt="flag-en-alt" data-lang-title="flag-en-title" data-lang="en" onclick="selectLanguage('en')">
+      <img src="https://flagcdn.com/w20/de.png" data-lang-alt="flag-de-alt" data-lang-title="flag-de-title" data-lang="de" onclick="selectLanguage('de')">
+    </div>
+  </div>
   <script src="lang.js"></script>
   <script>
-    detectLanguage();
+    const currentFlag = document.getElementById('current-flag');
+    const flagDropdown = document.getElementById('flag-dropdown');
+    currentFlag.addEventListener('click', () => {
+      flagDropdown.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!flagDropdown.contains(e.target) && !currentFlag.contains(e.target)) {
+        flagDropdown.classList.remove('open');
+      }
+    });
+    function selectLanguage(lang) {
+      setLanguage(lang);
+      const flagMap = {
+        ru: 'ru',
+        uk: 'ua',
+        en: 'us',
+        de: 'de'
+      };
+      const code = flagMap[lang] || 'ru';
+      currentFlag.src = `https://flagcdn.com/w20/${code}.png`;
+      localStorage.setItem('selectedLang', lang);
+      flagDropdown.classList.remove('open');
+    }
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedLang = localStorage.getItem('selectedLang') || 'ru';
+      selectLanguage(savedLang);
+    });
   </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93446839bc0b4575',t:'MTc0NTMxNzQyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>
