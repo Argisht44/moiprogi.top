@@ -88,6 +88,10 @@ const translations = {
     "extension-title-details": "Work.ua Salary Filter",
     "extension-description": "Удобное расширение для Chrome, которое фильтрует вакансии на сайте work.ua по вашим зарплатным предпочтениям.",
     "extension-link": "Установить расширение",
+    // New translations for back buttons
+    "back-to-home": "← Назад на главную",
+    "back-to-apps": "← Назад к приложениям",
+    "back-to-extension": "← Назад к расширению",
   },
   uk: {
     // index.html
@@ -178,6 +182,10 @@ const translations = {
     "extension-title-details": "Work.ua Salary Filter",
     "extension-description": "Зручне розширення для Chrome, яке фільтрує вакансії на сайті work.ua за вашими зарплатними уподобаннями.",
     "extension-link": "Встановити розширення",
+    // New translations for back buttons
+    "back-to-home": "← Назад на головну",
+    "back-to-apps": "← Назад до додатків",
+    "back-to-extension": "← Назад до розширення",
   },
   en: {
     // index.html
@@ -268,6 +276,10 @@ const translations = {
     "extension-title-details": "Work.ua Salary Filter",
     "extension-description": "A convenient Chrome extension that filters job listings on work.ua based on your salary preferences.",
     "extension-link": "Install Extension",
+    // New translations for back buttons
+    "back-to-home": "← Back to Home",
+    "back-to-apps": "← Back to Apps",
+    "back-to-extension": "← Back to Extension",
   },
   de: {
     // index.html
@@ -358,6 +370,10 @@ const translations = {
     "extension-title-details": "Work.ua Salary Filter",
     "extension-description": "Eine praktische Chrome-Erweiterung, die Stellenanzeigen auf work.ua basierend auf Ihren Gehaltsvorstellungen filtert.",
     "extension-link": "Erweiterung installieren",
+    // New translations for back buttons
+    "back-to-home": "← Zurück zur Startseite",
+    "back-to-apps": "← Zurück zu Apps",
+    "back-to-extension": "← Zurück zur Erweiterung",
   },
 };
 
@@ -367,7 +383,14 @@ function setLanguage(lang) {
 }
 
 function detectLanguage() {
-  const lang = localStorage.getItem("language") || "ru";
+  const savedLang = localStorage.getItem("language");
+  if (savedLang) {
+    setLanguage(savedLang);
+    return;
+  }
+  const browserLang = navigator.language.split('-')[0]; // Например, "en" из "en-US"
+  const supportedLangs = ['ru', 'uk', 'en', 'de'];
+  const lang = supportedLangs.includes(browserLang) ? browserLang : 'ru';
   setLanguage(lang);
 }
 
