@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .language-selector {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .language-selector img {
+    cursor: pointer;
+    width: 30px;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  .app {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .app img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+  }
+  
+  .app-content h2 {
+    margin-top: 0;
+  }
+  
+  .app-content a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+  
+  .app-content a:hover {
+    background-color: #555;
+  }
+  

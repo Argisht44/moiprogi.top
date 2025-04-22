@@ -1,0 +1,122 @@
+<script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+        </script><!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Free Films — каталог фильмов с быстрым поиском и полной информацией. Скачивайте на Google Play!" />
+  <meta name="keywords" content="Free Films, Android-приложение, каталог фильмов, Google Play, Argisht Mamreyan, moiprogi.top" />
+  <meta property="og:title" content="Moiprogi.top | Free Films" />
+  <meta property="og:description" content="Free Films — каталог фильмов с быстрым поиском. Скачивайте на Google Play!" />
+  <meta property="og:image" content="https://moiprogi.top/assets/og-image.jpg" />
+  <meta property="og:url" content="https://moiprogi.top/freefilms_details.html" />
+  <meta property="og:type" content="website" />
+  <title>moiprogi.top | Free Films</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+    }
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 transition-colors duration-300">
+  <header class="bg-gray-800 text-white sticky top-0 z-10 shadow-lg">
+    <div class="container mx-auto px-4 sm:px-6 py-4">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+        <div class="flex flex-col w-full">
+          <div class="flex justify-between items-center">
+            <a href="index.html" class="text-xl md:text-2xl font-bold">moiprogi.top</a>
+          </div>
+          <div class="md:hidden flex justify-start mt-2">
+            <a href="apps.html" class="text-blue-400 hover:text-blue-500 transition">← Назад к приложениям</a>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-4">
+          <a href="apps.html" id="nav-apps" class="hover:text-blue-400 transition"></a>
+          <a href="extension.html" id="nav-ext" class="hover:text-blue-400 transition"></a>
+          <div class="language-selector flex space-x-2">
+            <img src="https://flagcdn.com/w20/ru.png" alt="Русский флаг" onclick="setLanguage('ru')" class="w-6 h-4 border border-white rounded cursor-pointer" />
+            <img src="https://flagcdn.com/w20/ua.png" alt="Украинский флаг" onclick="setLanguage('uk')" class="w-6 h-4 border border-white rounded cursor-pointer" />
+            <img src="https://flagcdn.com/w20/us.png" alt="Флаг США" onclick="setLanguage('en')" class="w-6 h-4 border border-white rounded cursor-pointer" />
+            <img src="https://flagcdn.com/w20/de.png" alt="Немецкий флаг" onclick="setLanguage('de')" class="w-6 h-4 border border-white rounded cursor-pointer" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container mx-auto px-4 sm:px-6 py-8">
+    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center min-w-[300px] md:min-w-[600px]">
+      <img src="assets/freefilms.webp" alt="Иконка приложения Free Films" class="w-40 h-40 rounded-lg mb-4 md:mb-0 md:mr-6 object-cover" />
+      <div class="flex flex-col w-full">
+        <h1 id="app-title-films" class="text-3xl font-semibold mb-2"></h1>
+        <p id="app-description-films" class="text-base sm:text-lg mb-4"></p>
+        <div class="md:justify-start justify-center flex">
+          <a href="https://play.google.com/store/apps/details?id=com.argisht.freefilms" target="_blank" id="app-link-films" class="inline-block bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition"></a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center py-4">
+    © 2025 Argisht Mamreyan | <a href="https://moiprogi.top" class="hover:text-blue-400">moiprogi.top</a>
+  </footer>
+
+  <script src="lang.js"></script>
+  <script>
+    detectLanguage();
+  </script>
+</body>
+</html>

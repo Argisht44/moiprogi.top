@@ -1,0 +1,16 @@
+{
+  "name": "moiprogi.top",
+  "short_name": "Moiprogi",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0057b7",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ],
+  "lang": "ru"
+}
