@@ -50,7 +50,7 @@ const translations = {
     "extension_details-og-description": "Work.ua Salary Filter — расширение для фильтрации вакансий по зарплате. Установите из Chrome Web Store!",
     "extension_details-title": "moiprogi.top | Work.ua Salary Filter",
     "extension_details-alt": "Иконка Chrome-расширения Work.ua Salary Filter",
-    "extension_details-description": "Это удобное расширение для браузера Chrome, которое позволяет оптимизировать поиск работы на сайте work.ua, фильтруя вакансии в зависимости от ваших зарплатных предпочтений.\n\n**Основные функции:**\n- **Автоматическая фильтрация вакансий:** расширение скрывает предложения, не соответствующие установленному уровню зарплаты.",
+    "extension_details-description": "Это удобное расширение для браузера Chrome, которое позволяет оптимизировать поиск работы на сайте work.ua, фильтруя вакансии в зависимости от ваших зарплатных предпочтений.Основные функции: Автоматическая фильтрация вакансий: расширение скрывает предложения, не соответствующие установленному уровню зарплаты.",
     // Common
     "footer-copyright": "© 2025 Argisht Mamreyan | moiprogi.top",
     "language-selector-alt": "Язык",
@@ -144,7 +144,7 @@ const translations = {
     "extension_details-og-description": "Work.ua Salary Filter — розширення для фільтрації вакансій за зарплатою. Встановіть із Chrome Web Store!",
     "extension_details-title": "moiprogi.top | Work.ua Salary Filter",
     "extension_details-alt": "Іконка Chrome-розширення Work.ua Salary Filter",
-    "extension_details-description": "Це зручне розширення для браузера Chrome, яке дозволяє оптимізувати пошук роботи на сайті work.ua, фільтруючи вакансії залежно від ваших зарплатних уподобань.\n\n**Основні функції:**\n- **Автоматична фільтрація вакансій:** розширення приховує пропозиції, що не відповідають встановленому рівню зарплати.",
+    "extension_details-description": "Це зручне розширення для браузера Chrome, яке дозволяє оптимізувати пошук роботи на сайті work.ua, фільтруючи вакансії залежно від ваших зарплатних уподобань. Основні функції: Автоматична фільтрація вакансій: розширення приховує пропозиції, що не відповідають встановленому рівню зарплати.",
     // Common
     "footer-copyright": "© 2025 Аргішт Мамреян | moiprogi.top",
     "language-selector-alt": "Мова",
@@ -238,7 +238,7 @@ const translations = {
     "extension_details-og-description": "Work.ua Salary Filter — an extension for filtering job listings by salary. Install from Chrome Web Store!",
     "extension_details-title": "moiprogi.top | Work.ua Salary Filter",
     "extension_details-alt": "Work.ua Salary Filter Chrome extension icon",
-    "extension_details-description": "This convenient Chrome extension optimizes job searches on work.ua by filtering vacancies based on your salary preferences.\n\n**Key Features:**\n- **Automatic vacancy filtering:** The extension hides job listings that do not meet your set salary level.",
+    "extension_details-description": "This convenient Chrome extension optimizes job searches on work.ua by filtering vacancies based on your salary preferences. Key Features: Automatic vacancy filtering: The extension hides job listings that do not meet your set salary level.",
     // Common
     "footer-copyright": "© 2025 Argisht Mamreyan | moiprogi.top",
     "language-selector-alt": "Language",
@@ -332,7 +332,7 @@ const translations = {
     "extension_details-og-description": "Work.ua Salary Filter — eine Erweiterung zum Filtern von Stellenanzeigen nach Gehalt. Installieren Sie aus dem Chrome Web Store!",
     "extension_details-title": "moiprogi.top | Work.ua Salary Filter",
     "extension_details-alt": "Work.ua Salary Filter Chrome-Erweiterungssymbol",
-    "extension_details-description": "Diese praktische Chrome-Erweiterung optimiert die Jobsuche auf work.ua, indem sie Stellenanzeigen basierend auf Ihren Gehaltsvorstellungen filtert.\n\n**Hauptfunktionen:**\n- **Automatische Filterung von Stellenanzeigen:** Die Erweiterung blendet Angebote aus, die nicht Ihrem festgelegten Gehaltsniveau entsprechen.",
+    "extension_details-description": "Diese praktische Chrome-Erweiterung optimiert die Jobsuche auf work.ua, indem sie Stellenanzeigen basierend auf Ihren Gehaltsvorstellungen filtert. Hauptfunktionen: Automatische Filterung von Stellenanzeigen: Die Erweiterung blendet Angebote aus, die nicht Ihrem festgelegten Gehaltsniveau entsprechen.",
     // Common
     "footer-copyright": "© 2025 Argisht Mamreyan | moiprogi.top",
     "language-selector-alt": "Sprache",
